@@ -137,6 +137,13 @@ spec:
       - name: web
         image: dockerlc1991/web:v1 #joindevops/web:v1
         imagePullPolicy: Always
+        resources:
+         requests:
+           cpu: "100m"
+           memory: "68Mi"
+         limits:
+           cpu: "200m"
+           memory: "128Mi"
         volumeMounts:
         - name: nginx-conf
           mountPath: /etc/nginx/nginx.conf
